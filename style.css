@@ -5,3 +5,12 @@
     left: 50%;
     transform: translate(-50%, -84%);
 }
+
+.achieve-but{
+    display: flex;
+    min-height: 85px;
+    min-width: 25%;
+    align-items: flex-end;
+    justify-content: end;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
