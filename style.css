@@ -1,3 +1,8 @@
+body{
+  max-width:100%;
+  width: 100vw;
+  overflow-x: hidden;
+}
 .header-ball{
     width: calc(100vw + 700px);
     height:  1000px;
@@ -14,3 +19,68 @@
     justify-content: end;
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
+
+.get-reward-but{
+  display: flex;
+  min-height: 85px;
+  min-width: 25%;
+  align-items: flex-end;
+  justify-content: end;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+
+@keyframes firework {
+    0% { 
+      transform: translate(-50%, 0);
+      opacity: 1;
+      width: 0.5vmin;
+    }
+    80%{
+        width: 38vmin; 
+        opacity: 0.05; 
+    }
+    100% { 
+      width: 38vmin; 
+      opacity: 0; 
+    }
+  }
+  
+  .firework,
+  .firework::before,
+  .firework::after {
+    --top: 60vh;
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 0.5vmin;
+    aspect-ratio: 1;
+    background:
+      /* random backgrounds */
+      radial-gradient(circle, rgb(254, 184, 32) 0.9vmin, #0000 0) 50% 10%,
+      radial-gradient(circle, rgb(255, 200, 0) 0.9vmin, #0000 0) 60% 10%,
+      radial-gradient(circle, rgb(255, 200, 0) 0.2vmin, #0000 0) 20% 30%,
+      radial-gradient(circle, rgb(254, 184, 32) 0.3vmin, #0000 0) 00% 50%,
+      radial-gradient(circle, rgb(255, 200, 0) 0.9vmin, #0000 0) 50% 99%,
+      radial-gradient(circle, rgb(255, 200, 0) 0.2vmin, #0000 0) 99% 50%,
+      radial-gradient(circle, rgb(254, 184, 32) 0.3vmin, #0000 0) 80% 90%,
+      radial-gradient(circle, rgb(255, 200, 0) 0.5vmin, #0000 0) 95% 90%,
+      radial-gradient(circle, rgb(255, 200, 0) 0.9vmin, #0000 0) 10% 60%,
+      radial-gradient(circle, rgb(254, 184, 32) 0.2vmin, #0000 0) 31% 80%,
+      radial-gradient(circle, rgb(255, 200, 0) 0.8vmin, #0000 0) 80% 10%,
+      radial-gradient(circle, rgb(254, 184, 32) 0.2vmin, #0000 0) 90% 23%,
+      radial-gradient(circle, rgb(254, 184, 32) 0.3vmin, #0000 0) 45% 20%,
+      radial-gradient(circle, rgb(254, 184, 32) 0.5vmin, #0000 0) 13% 24%
+      ;
+    background-size: 2vmin 2vmin;
+    background-repeat: no-repeat;
+    /* animation: firework 2s; */
+  }
+  
+  .firework::before {
+    transform: translate(-50%, -50%) rotate(25deg) !important; 
+  }
+  
+  .firework::after {
+    transform: translate(-50%, -50%) rotate(-37deg) !important;
+  }
