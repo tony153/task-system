@@ -50,7 +50,7 @@ function append_one_task_in_group(add_task_name,add_task_discription,add_task_re
     ');
 }
 
-var index_of_remove_loop =0;
+//var index_of_remove_loop =0;
 reset_achieve_button_listener();
 function reset_achieve_button_listener(){
     task_achieve_buts = document.querySelectorAll("button.achieve-but");
@@ -69,7 +69,7 @@ function reset_achieve_button_listener(){
             task_but.parentNode.remove();
 
             console.log(task_list); 
-            index_of_remove_loop = index_of_remove_loop + 1;
+            //index_of_remove_loop = index_of_remove_loop + 1;
         });
     });
 
@@ -167,5 +167,26 @@ clickedElements.forEach((clickedElement,index)=>{
 };
 
 
+let to_redemption_reward_bnt = document.getElementById("to_redemption_reward");
+let to_do_task_bnt = document.getElementById("to_do_task");
+
+let task_group_page = document.getElementById("task-group").parentNode;
+let reward_group_page = document.getElementById("reward-group").parentNode;
+
+to_redemption_reward_bnt.addEventListener("click",()=>{
+    console.log("test");
+    to_do_task_bnt.classList.remove("hidden");
+    to_redemption_reward_bnt.classList.add("hidden");
+    task_group_page.classList.add("hidden");
+    reward_group_page.classList.remove("hidden");
+
+});
+to_do_task_bnt.addEventListener("click",()=>{
+    console.log("test2");
+    to_redemption_reward_bnt.classList.remove("hidden");
+    to_do_task_bnt.classList.add("hidden");
+    task_group_page.classList.remove("hidden");
+    reward_group_page.classList.add("hidden");
+});
 
 
