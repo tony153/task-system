@@ -102,22 +102,30 @@
                 </div>
             </div>
     </div> -->
-    <div class="flex flex-col items-center w-full h-screen hidden">
+    <div class="flex flex-col items-center w-full hidden">
         <div class="mt-10 mb-2 text-3xl">
             換領獎勵
         </div>
         <hr class="m-2 border-2 border-slate-200 w-11/12">
 
-        <div id="reward-group" class="w-11/12">
-
-            <div class="flex justify-center items-cneter rounded-xl border-2 p-3 sm:p-5 pr-0 pb-0 sm:pr-0 sm:pb-0 mb-2 w-full border-slate-300 bg-yellow-100 hover:border-slate-400 overflow-hidden">
-                <span class="text-3xl text-amber-950 flex-1 py-3 font-bold  h-full pl-2" >
-                        村掌聲
+        <div id="default-reward-group" class="w-11/12">
+            <div class="flex justify-center items-end rounded-xl border-2 p-3 sm:p-5 pr-0 pb-0 sm:pr-0 sm:pb-0 mb-2 w-full border-slate-300 bg-yellow-100 hover:border-slate-400 overflow-hidden relative">
+                <span class="text-3xl text-amber-950 flex-1 py-3 font-bold  h-full pl-2 max-w-[75%]" >
+                        村民的掌聲
+                        <div class="flex items-center text-lg pt-1" style="color: #bda928;">
+                            <img src="images/svg/coin-vector-svgrepo-com.svg" width="45" alt="" class="inline sm:ml-1 "> 
+                            <span class="mr-1 pt-4">所需</span>
+                            <span class="mr-1 pt-4">20</span>   
+                            <span class="pt-4">枚金幣</span>   
+                        </div>
                 </span>
                 <button class="get-reward-but text-xl sm:text-3xl hover:bg-yellow-500 bg-amber-300 text-yellow-700  hover:text-white py-2 px-2 hover:border-transparent flex-none">
                     換領
                 </button> 
             </div>
+        </div>
+
+        <div id="reward-group" class="w-11/12">
         </div>
 
     </div>
