@@ -427,4 +427,14 @@ to_do_task_bnt.addEventListener("click",()=>{
     reward_group_page.classList.add("hidden");
 });
 
+let clear_localStorage_bnt = document.getElementById("clear_localStorage");
+clear_localStorage_bnt.addEventListener("click",()=>{
+    if (confirm('確定刪除本地的記錄及重設嗎？')) {
+        localStorage.clear();
+      } else {
+        // Do nothing!
+        console.log('Nothing to do');
+      }
+});
+
 
