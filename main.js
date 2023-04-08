@@ -108,13 +108,14 @@ function reset_achieve_button_listener(){
             //console.log(task_list[index]);
             number_of_coins.innerHTML =  parseInt(number_of_coins.innerHTML) + task_list[index].task_reward;
 
-            let current_task_quota =  task_but.parentNode.querySelector(".task-quota").innerHTML;
+            let current_task_quota =  task_but.parentNode.parentNode.querySelector(".task-quota").innerHTML;
+
             if (current_task_quota == 1){
                 task_list[index]=null;
                 // Remove the clicked element from the DOM
-                task_but.parentNode.remove();
+                task_but.parentNode.parentNode.remove();
             }else{
-                task_but.parentNode.querySelector(".task-quota").innerHTML = parseInt(current_task_quota) - 1;
+                task_but.parentNode.parentNode.querySelector(".task-quota").innerHTML = parseInt(current_task_quota) - 1;
                 task_list[index].task_quota=task_list[index].task_quota -1;
             }
 
