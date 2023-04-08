@@ -16,29 +16,29 @@ const reward = {
     required_coins: 0,
 }
 
-console.log("task_list:");
-console.log(JSON.parse(localStorage.getItem('task_list')));
-if (Array.isArray(JSON.parse(localStorage.getItem('task_list')))){
-    task_list = JSON.parse(localStorage.getItem('task_list'));
-}else{
-    console.log("o");
-    let new_task = Object.create(task);
-    new_task.task_name = "討伐哥布林 三十隻";
-    new_task.task_discription = "最近哥布林的肆虐越來越嚴重，許多村莊被哥布林襲擊，村民們的生命財產都受到威脅。因此，需要一群勇者前去討伐哥布林，保護村莊居民的安全。";
-    new_task.task_reward = 50;
-    task_list.push(new_task);
-}
-console.log("reward_list:");
-console.log(localStorage.getItem('reward_list'));
-if (Array.isArray(JSON.parse(localStorage.getItem('reward_list')))){
-    reward_list = JSON.parse(localStorage.getItem('reward_list'));
-}else{
-    console.log("oo");
-    let new_reward = Object.create(reward);
-    new_reward.reward_name ="休息10分鐘";
-    new_reward.required_coins= 10;
-    reward_list.push(new_reward);
-}
+// console.log("task_list:");
+// console.log(JSON.parse(localStorage.getItem('task_list')));
+// if (Array.isArray(JSON.parse(localStorage.getItem('task_list')))){
+//     task_list = JSON.parse(localStorage.getItem('task_list'));
+// }else{
+//     console.log("o");
+//     let new_task = Object.create(task);
+//     new_task.task_name = "討伐哥布林 三十隻";
+//     new_task.task_discription = "最近哥布林的肆虐越來越嚴重，許多村莊被哥布林襲擊，村民們的生命財產都受到威脅。因此，需要一群勇者前去討伐哥布林，保護村莊居民的安全。";
+//     new_task.task_reward = 50;
+//     task_list.push(new_task);
+// }
+// console.log("reward_list:");
+// console.log(localStorage.getItem('reward_list'));
+// if (Array.isArray(JSON.parse(localStorage.getItem('reward_list')))){
+//     reward_list = JSON.parse(localStorage.getItem('reward_list'));
+// }else{
+//     console.log("oo");
+//     let new_reward = Object.create(reward);
+//     new_reward.reward_name ="休息10分鐘";
+//     new_reward.required_coins= 10;
+//     reward_list.push(new_reward);
+// }
 
 console.log("coins_quantity:");
 console.log(localStorage.getItem('coins_quantity'));
@@ -400,6 +400,8 @@ get_default_reward_buts[0].addEventListener("click",function(){
             audio.pause();
             audio.currentTime = 0; 
         },10000);
+
+        localStorage.setItem('coins_quantity', parseInt(number_of_coins.innerHTML));//==
     }else{
         alert("金幣不足");
     }
@@ -431,6 +433,7 @@ let clear_localStorage_bnt = document.getElementById("clear_localStorage");
 clear_localStorage_bnt.addEventListener("click",()=>{
     if (confirm('確定刪除本地的記錄及重設嗎？')) {
         localStorage.clear();
+        location.reload();
       } else {
         // Do nothing!
         console.log('Nothing to do');
