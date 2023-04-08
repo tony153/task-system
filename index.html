@@ -13,7 +13,7 @@
     <div id="header" class="flex justify-center relative overflow-hidden w-full h-2/5">
         <div class="header-ball bg-yellow-400 rounded-full -z-50">
         </div>
-        <div class="flex flex-col justify-center  w-10/12 sm:w-2/3 m-auto mt-5 rounded-3xl bg-amber-100">
+        <div class="flex flex-col justify-center max-w-[600px]  w-10/12 sm:w-2/3 m-auto mt-5 rounded-3xl bg-amber-100">
             <div id="to_redemption_reward" class="mr-6 mt-6 text-right text-xl select-none">
                 兌換獎勵 >
             </div>
@@ -23,12 +23,12 @@
             <div class="flex items-center mb-8 -mt-2">
                 <img src="images/svg/coin-svgrepo-com.svg" height="80" width="80" alt="" class="ml-8 mr-4 inline">
                 <span class="text-5xl font-mono text-slate-700">x </span>
-                <span id="coins-quantity" class="text-6xl font-mono text-slate-700">50</span>
+                <span id="coins-quantity" class="text-6xl font-mono text-slate-700">0</span>
             </div>
         </div>
     </div>
 
-    <div class="flex flex-col items-center" style="padding-bottom: 70px;">
+    <div class="flex flex-col items-center" style="padding-bottom: 110px;">
         <div class="mt-10 mb-2 text-3xl">
             我的任務
         </div>
@@ -36,7 +36,7 @@
 
 
 
-        <div id="task-group" class="w-11/12">
+        <div id="task-group" class="w-11/12 grid md:grid-cols-2 md:gap-1 lg:grid-cols-3 lg:gap-2">
 
             <!-- <div class="flex justify-center items-end rounded-xl border-2 p-3 sm:p-5 pr-0 pb-0 sm:pr-0 sm:pb-0 mb-2 w-full border-slate-300 bg-amber-200 hover:border-slate-400 overflow-hidden">
                 <span class="text-2xl text-amber-950 flex-1 py-2 font-bold" >
@@ -51,6 +51,10 @@
                         <span class="mr-1 pt-4">獎勵</span>
                         <span class="mr-1 pt-4">50</span>   
                         <span class="pt-4">枚金幣</span>   
+                    </div>
+                    <div class="text-sm mt-2 ml-2">
+                        <span>剩餘數量:</span>
+                        <span class="task-quota">10</span>
                     </div>
                 </span>
                 <button class="achieve-but text-xl sm:text-3xl hover:bg-yellow-500 bg-amber-300 text-yellow-700  hover:text-white py-2 px-2 hover:border-transparent flex-none">
@@ -92,6 +96,11 @@
                         <span class="mx-1">枚金幤</span>
                         <span class="mx-1">酬勞</span>
                     </div>
+
+                    <div class="mt-5 text-2xl flex justify-end">
+                        <span class="mx-1">任務數量</span>
+                        <input type="number" value="1" class="mx-1 text-center" style="width:3em;">
+                    </div>
                     <div class="mt-12 flex justify-center">
                         <button type="button" class="focus:outline-none w-5/6 text-white bg-yellow-500 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900">提交</button>
                     </div>
@@ -102,13 +111,13 @@
                 </div>
             </div>
     </div> -->
-    <div class="flex flex-col items-center w-full hidden">
+    <div class="flex flex-col items-center w-full hidden" style="padding-bottom: 110px;">
         <div class="mt-10 mb-2 text-3xl">
             換領獎勵
         </div>
         <hr class="m-2 border-2 border-slate-200 w-11/12">
 
-        <div id="default-reward-group" class="w-11/12">
+        <div id="default-reward-group" class="w-11/12 grid md:grid-cols-2 md:gap-1">
             <div class="flex justify-center items-end rounded-xl border-2 p-3 sm:p-5 pr-0 pb-0 sm:pr-0 sm:pb-0 mb-2 w-full border-slate-300 bg-yellow-100 hover:border-slate-400 overflow-hidden relative">
                 <span class="text-3xl text-amber-950 flex-1 py-3 font-bold  h-full pl-2 max-w-[75%]" >
                         村民的掌聲
@@ -119,13 +128,13 @@
                             <span class="pt-4">枚金幣</span>   
                         </div>
                 </span>
-                <button class="get-reward-but text-xl sm:text-3xl hover:bg-yellow-500 bg-amber-300 text-yellow-700  hover:text-white py-2 px-2 hover:border-transparent flex-none">
+                <button class="get-reward-but text-xl sm:text-3xl hover:bg-yellow-500 bg-amber-300 text-yellow-700  hover:text-white py-2 px-1 hover:border-transparent flex-none">
                     換領
                 </button> 
             </div>
         </div>
 
-        <div id="reward-group" class="w-11/12">
+        <div id="reward-group" class="w-11/12 grid md:grid-cols-2 md:gap-1">
         </div>
 
     </div>
@@ -138,7 +147,7 @@
         <img src="images/svg/add-to-list-svgrepo-com.svg" width="26" height="26" alt="" class="mr-1">
     </button>
     <button id="clear_localStorage" class="absolute top-0 right-0 m-1">
-        <img src="images/clear-option-svgrepo-com.svg" width="30px" alt="">
+        <img src="images/svg/clear-option-svgrepo-com.svg" width="30px" alt="">
     </button>
 
 

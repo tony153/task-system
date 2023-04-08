@@ -13,9 +13,9 @@ body{
 
 .achieve-but{
     display: flex;
-    min-height: 85px;
+    height: 85px;
     width: 25%;
-    min-width: 5rem;
+    min-width: 6rem;
     align-items: flex-end;
     justify-content: end;
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
